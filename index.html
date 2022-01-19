@@ -5,11 +5,53 @@
     <meta name="description" content="calculator">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main-style-sheet -->
+    <link rel="stylesheet" href="main.css">
+    <!-- main fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
     <div class="calculator">
-        
+        <div class="header">
+            <div class="logo">Mini Claculator</div>
+            <div class="theme-changer">
+                <span>Theme</span>
+                <div class="button">
+                    <div class="numbers">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <div class="slider">
+                        <div class="ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="text" class="screen" value="0">
+        <div class="buttons">
+            <input type="text" value="7">
+            <input type="text" value="8">
+            <input type="text" value="9">
+            <input type="text" id="del" value="Del">
+            <input type="text" value="4">
+            <input type="text" value="5">
+            <input type="text" value="6">
+            <input type="text" id="plus" value="+">
+            <input type="text" value="1">
+            <input type="text" value="2">
+            <input type="text" value="3">
+            <input type="text" id="minus" value="-">
+            <input type="text" value=".">
+            <input type="text" value="0">
+            <input type="text" id="divide" value="/">
+            <input type="text" id="times" value="x">
+            <input type="text" id="reset" value="RESET">
+            <input type="text" id="equal" value="=">
+        </div>
     </div>
 </body>
 </html>
