@@ -79,6 +79,11 @@ body{
             border: none;
             text-align: right;
             padding: 20px 10px;
+            user-select: none;
+            &:focus{
+                border: none;
+                outline: none;
+            }
         }
         .buttons{
             display: grid;
@@ -108,6 +113,11 @@ body{
                 color: $text-color;
                 height: 50px;
                 cursor: pointer;
+                user-select: none;
+                &:focus{
+                    border: none;
+                    outline: none;
+                }
                 &#del{
                     background-color: $special-key-background;
                     color: $text-color-white;

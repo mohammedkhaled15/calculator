@@ -133,6 +133,15 @@ body .calculator input.screen {
   border: none;
   text-align: right;
   padding: 20px 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .calculator input.screen:focus {
+  border: none;
+  outline: none;
 }
 
 body .calculator .buttons {
@@ -177,6 +186,15 @@ body .calculator .buttons input {
   color: #444b5a;
   height: 50px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .calculator .buttons input:focus {
+  border: none;
+  outline: none;
 }
 
 body .calculator .buttons input#del {
@@ -199,4 +217,4 @@ body .calculator .buttons input#equal {
   background-color: #d03f2f;
   color: #fff;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=first-theme.css.map */
