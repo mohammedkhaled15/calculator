@@ -42,8 +42,6 @@ document.querySelectorAll("input:not(#del, #reset, #equal, .screen)").forEach(el
         }else{
             result.value+=el.value
         }
-
-        // result.value+=el.value
     })
 })
 
