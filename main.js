@@ -1,4 +1,3 @@
-var result = document.querySelector("input.screen")
 
 document.querySelectorAll("input:not(#del, #reset, #equal, .screen)").forEach(el=>{
     el.addEventListener("mousedown",function(){
@@ -6,11 +5,6 @@ document.querySelectorAll("input:not(#del, #reset, #equal, .screen)").forEach(el
     })
     el.addEventListener("mouseup",function(){
         this.style.backgroundColor = "#fff"
-    })
-    el.addEventListener("click",function(){
-            
-        result.value+=el.value
-        
     })
 })
 
@@ -30,14 +24,45 @@ document.querySelectorAll(" #equal").forEach(el=>{
     el.addEventListener("mouseup",function(){
         this.style.backgroundColor = "hsl(6, 63%, 50%)"
     })
-    el.addEventListener("click", function(){
-        result.value = eval(result.value)
+})
+
+// All about functionality of the calculator
+
+var result = document.querySelector("input.screen")
+
+// all numbers and operations buttons
+
+document.querySelectorAll("input:not(#del, #reset, #equal, .screen)").forEach(el=>{
+
+    el.addEventListener("click",function(){
+        
+        if(result.value == "0"){
+            result.value = ""
+            result.value+=el.value
+        }else{
+            result.value+=el.value
+        }
     })
 })
+
+
+// [ reset ] button
 
 document.querySelector("#reset").addEventListener("click",function(){
     result.value = "0"
 })
+
+// [ delete ] button
+
 document.querySelector("#del").addEventListener("click",function(){
     result.value = result.value.substring(0,result.value.length-1)
+})
+
+// [ = ] button
+
+document.querySelectorAll(" #equal").forEach(el=>{
+    
+    el.addEventListener("click", function(){
+        result.value = eval(result.value.replace("x","*"))
+    })
 })
