@@ -1,4 +1,4 @@
-@import "./1colors";
+@import "./2colors";
 @import "./grid";
 @import "./mixins";
 @import "./classes";
@@ -6,7 +6,6 @@ body{
     background-color: $main-back-ground;
     .calculator{
         border: 2px solid $calc-back-ground;
-        box-shadow: 10px 10px 10px #000;
         .header{
             .logo{
                 color: $text-color-white;

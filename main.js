@@ -66,3 +66,22 @@ document.querySelectorAll(" #equal").forEach(el=>{
         result.value = eval(result.value.replace("x","*"))
     })
 })
+
+
+// theme modification
+
+// motion of the ball 
+
+document.querySelector(".slider").addEventListener("click",function(){
+    if(this.firstElementChild.classList.contains("mid")){
+        this.firstElementChild.classList.remove("mid")
+        this.firstElementChild.classList.add("end")
+        document.getElementsByTagName("link")[0].setAttribute("href","third-theme.css")
+    }else if(this.firstElementChild.classList.contains("end")){
+        this.firstElementChild.classList.remove("end")
+        document.getElementsByTagName("link")[0].setAttribute("href","first-theme.css")
+    }else{
+        this.firstElementChild.classList.add("mid")
+        document.getElementsByTagName("link")[0].setAttribute("href","second-theme.css")
+    }
+})
